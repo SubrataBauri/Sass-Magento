@@ -1,0 +1,33 @@
+/*  Custom Main CSS  */
+/*  ============================================ 
+    Mixins, Variables, Extends, Inharitance
+================================================ */
+/* line 1, ../sass/_mixin_variable.scss */
+.fullWidthBlock, .siteHeader, .mainBody, .siteFooter {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+/*  ============================================ 
+    Main CSS
+================================================ */
+/* line 10, ../sass/main.scss */
+body {
+  background: #ff0000;
+}
+
+/* line 13, ../sass/main.scss */
+.siteHeader, .mainBody, .siteFooter {
+  padding-bottom: 10px;
+}
+
+/* line 17, ../sass/main.scss */
+h1 {
+  font-size: 30px;
+}
+
+/*  ============================================ 
+    Mediaquery CSS
+================================================ */
