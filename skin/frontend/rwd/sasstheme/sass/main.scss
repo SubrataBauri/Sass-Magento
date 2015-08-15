@@ -1,0 +1,23 @@
+/*  Custom Main CSS  */
+/*  ============================================ 
+    Mixins, Variables, Extends, Inharitance
+================================================ */
+@import 'mixin_variable';
+
+/*  ============================================ 
+    Main CSS
+================================================ */
+body{
+    background: #ff0000;
+}
+.siteHeader, .mainBody, .siteFooter{
+    @extend .fullWidthBlock;
+    padding-bottom: 10px;
+}
+h1{
+    font-size: 30px;
+}
+
+/*  ============================================ 
+    Mediaquery CSS
+================================================ */
