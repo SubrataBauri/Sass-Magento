@@ -1,0 +1,82 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<footer class="siteFooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 footCol1">
+                <?php echo $this->getLayout()->createBlock("cms/block")->setBlockId("footer_col1_about_links")->toHtml();?>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 footCol2">
+                <?php echo $this->getLayout()->createBlock("cms/block")->setBlockId("footer_col2_info_text")->toHtml();?>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 footCol3">
+                <div class="newsLetter">
+                    <h3>Subscribe Newsletter</h3>
+                    <p>Stay updated about our products and services.</p>
+                    <?php echo $this->getLayout()->createBlock('newsletter/subscribe')->setTemplate('newsletter/subscribe.phtml')->toHtml(); ?>
+                </div>
+                <p class="socialTagline"><?php echo $this->__('Stay connected with us');?></p>
+                <ul class="socialIcons">
+                    <li class="socials-facebook"><a href="" target="_blank"></a></li>
+                    <li class="socials-twitter"><a href="" target="_blank"></a></li>
+                    <li class="socials-linkedin"><a href="" target="_blank"></a></li>
+                    <li class="socials-instagram"><a href="" target="_blank"></a></li>
+                    <li class="socials-youtube"><a href="" target="_blank"></a></li>
+                </ul>
+            </div>
+            <address class="copyright text-center col-lg-12 col-md-12 col-sm-12 col-xs-12"><?php echo $this->getCopyright() ?></address>
+        </div>
+    </div>
+</footer>
+<script src="<?php echo $this->getSkinUrl('js/bootstrap.min.js'); ?>"></script>
+<script>
+    (function() {
+        var isBootstrapEvent = false;
+        if (window.jQuery) {
+            var all = jQuery('*');
+            jQuery.each(['hide.bs.dropdown', 
+                'hide.bs.collapse', 
+                'hide.bs.modal', 
+                'hide.bs.tooltip',
+                'hide.bs.popover'], function(index, eventName) {
+                all.on(eventName, function( event ) {
+                    isBootstrapEvent = true;
+                });
+            });
+        }
+        var originalHide = Element.hide;
+        Element.addMethods({
+            hide: function(element) {
+                if(isBootstrapEvent) {
+                    isBootstrapEvent = false;
+                    return element;
+                }
+                return originalHide(element);
+            }
+        });
+    })();
+</script>

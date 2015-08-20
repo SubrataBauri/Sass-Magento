@@ -1,0 +1,229 @@
+/*  Text color  */
+/*  Font and Size  */
+/* line 80, socials/*.png */
+.socials-sprite, .socials-facebook, .socials-instagram, .socials-linkedin, .socials-twitter, .socials-youtube {
+  background-image: url('/images/socials-sfb47fc50e4.png');
+  background-repeat: no-repeat;
+}
+
+/* ----------------------------------------------------------------------  */
+/* line 5, ../sass/local.scss */
+body {
+  font-family: verdana;
+  font-size: 14px;
+}
+
+/* line 9, ../sass/local.scss */
+.siteHeader, .mainBody, .siteFooter, .stickyTopPannel, .carouselWrapper, .aboutText, .productsWrap {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 12, ../sass/local.scss */
+.stickyTopPannel {
+  border-bottom: 1px solid #333;
+  -moz-box-shadow: #333 0px 0px 5px;
+  -webkit-box-shadow: #333 0px 0px 5px;
+  box-shadow: #333 0px 0px 5px;
+  position: fixed;
+  min-height: 40px;
+  top: 0;
+  z-index: 15000;
+  background: #fff;
+}
+
+/* line 21, ../sass/local.scss */
+.topInfo, .headerTopLinks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: left;
+  font-size: 12px;
+}
+/* line 12, ../sass/_custom_mixins.scss */
+.topInfo li, .headerTopLinks li {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 25, ../sass/local.scss */
+.topInfo li {
+  padding: 10px 20px 10px 0;
+}
+
+/* line 28, ../sass/local.scss */
+.headerTopLinks {
+  float: right;
+}
+
+/* line 31, ../sass/local.scss */
+.headerTopLinks a {
+  padding: 10px 0 10px 20px;
+  float: left;
+  color: #b2591a;
+}
+/* line 35, ../sass/local.scss */
+.headerTopLinks a:hover {
+  color: #ed741f;
+  text-decoration: none;
+}
+
+/* line 40, ../sass/local.scss */
+.logoSearchWrap {
+  margin-top: 50px;
+}
+/* line 42, ../sass/local.scss */
+.logoSearchWrap .logoWrap {
+  margin: 15px 0;
+}
+/* line 45, ../sass/local.scss */
+.logoSearchWrap .searchWrap {
+  margin-top: 32px;
+}
+
+/* line 49, ../sass/local.scss */
+.carousel-caption {
+  font-size: 16px;
+  color: #b2591a;
+  font-weight: bold;
+}
+
+/* line 55, ../sass/local.scss */
+.aboutText, .featuredPrdWrap {
+  margin-top: 30px;
+}
+
+/* line 58, ../sass/local.scss */
+.aboutText p {
+  font-size: 16px;
+}
+
+/* line 61, ../sass/local.scss */
+.itemsWrap {
+  margin-top: 15px;
+}
+/* line 63, ../sass/local.scss */
+.itemsWrap img {
+  max-width: 100%;
+}
+
+/* line 69, ../sass/local.scss */
+.siteFooter {
+  border-top: 1px solid #333;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-top: 10px;
+  font-size: 12px;
+  color: #606060;
+}
+
+/* line 77, ../sass/local.scss */
+.siteFooter h3 {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #333;
+}
+
+/* line 84, ../sass/local.scss */
+.footCol1 ul {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+/* line 86, ../sass/local.scss */
+.footCol1 ul li {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 90, ../sass/local.scss */
+.siteFooter a {
+  color: #606060;
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  padding: 4px 0;
+}
+/* line 95, ../sass/local.scss */
+.siteFooter a:hover {
+  color: #ed741f;
+  text-decoration: none;
+}
+
+/* line 100, ../sass/local.scss */
+.newsLetterformWrap, .newsLetterformWrap ul, .socialIcons, .socialTagline {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 103, ../sass/local.scss */
+.newsLetterformWrap input {
+  float: left;
+}
+
+/* line 106, ../sass/local.scss */
+.newsLetterformWrap input.inputBox {
+  width: 73%;
+}
+
+/* line 109, ../sass/local.scss */
+.newsLetterformWrap input.btn {
+  width: 25%;
+  float: right;
+}
+
+/* line 113, ../sass/local.scss */
+.socialTagline {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+/* line 84, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.socials-facebook {
+  background-position: 0 0;
+}
+
+/* line 84, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.socials-instagram {
+  background-position: 0 -48px;
+}
+
+/* line 84, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.socials-linkedin {
+  background-position: 0 -96px;
+}
+
+/* line 84, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.socials-twitter {
+  background-position: 0 -144px;
+}
+
+/* line 84, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.socials-youtube {
+  background-position: 0 -192px;
+}
+
+/* line 119, ../sass/local.scss */
+.socialIcons li {
+  float: left;
+  margin-right: 5px;
+  width: 50px;
+  height: 40px;
+  list-style: none;
+}
+/* line 125, ../sass/local.scss */
+.socialIcons li a {
+  width: 100%;
+  height: 50px;
+}

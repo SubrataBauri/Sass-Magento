@@ -4,8 +4,38 @@
         <reference name="head">
             <action method="addItem">
                 <type>skin_css</type>
-                <name>css/main.css</name>
+                <name>css/bootstrap.min.css</name>
             </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/bootstrap-theme.min.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>stylesheets/local.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/html5shiv.min.js</name>
+                <params/><if><![CDATA[ (if lt IE 9)]]></if>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/respond.min.js</name>
+                <params/><if><![CDATA[ (if lt IE 9)]]></if>
+            </action>
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/styles.css</name>
+            </action>
+        </reference>
+        <reference name="right">
+            <remove name="paypal.partner.right.logo"/>
+            <remove name="tags_popular"></remove>
+            <remove name="cart_sidebar"></remove>
+            <remove name="catalog.compare.sidebar"></remove>
+            <remove name="right.reports.product.viewed"></remove>
+            <remove name="sale.reorder.sidebar"></remove>
         </reference>
     </default>
 </layout>
