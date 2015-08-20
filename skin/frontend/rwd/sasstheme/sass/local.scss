@@ -1,0 +1,129 @@
+@import "compass";
+@import "custom_mixins";
+@import "socials/*.png";
+/* ----------------------------------------------------------------------  */
+body{
+    font-family: $pfont;
+    font-size: $normalFont;
+}
+.siteHeader, .mainBody, .siteFooter, .stickyTopPannel, .carouselWrapper, .aboutText, .productsWrap{
+    @include fullWidth;
+}
+.stickyTopPannel{
+    border-bottom: 1px solid #333;
+    @include box-shadow(#333 0px 0px 5px);
+    position: fixed;
+    min-height: 40px;
+    top: 0;
+    z-index: 15000;
+    background: #fff;
+}
+.topInfo, .headerTopLinks{
+    @include inlineList;
+    font-size: $smallFont;
+}
+.topInfo li{
+    padding: 10px 20px 10px 0;
+}
+.headerTopLinks{
+    float: right;
+}
+.headerTopLinks a{
+    padding: 10px 0 10px 20px;
+    float: left;
+    color: $anchorColor;
+    &:hover{
+        color: $anchorHoverColor;
+        text-decoration: none;
+    }
+}
+.logoSearchWrap{
+    margin-top: 50px;
+    .logoWrap{
+        margin: 15px 0;
+    }
+    .searchWrap{
+        margin-top: 32px;
+    }
+}
+.carousel-caption{
+    font-size: $bigFont;
+    color: $anchorColor;
+    font-weight: bold;
+}
+
+.aboutText, .featuredPrdWrap{
+    margin-top: 30px;
+}
+.aboutText p{
+    font-size: $bigFont;
+}
+.itemsWrap{
+    margin-top: 15px;
+    img{
+        max-width: 100%;
+    }
+}
+
+
+.siteFooter{
+    border-top: 1px solid #333;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-top: 10px;
+    font-size: $smallFont;
+    color: $normalfontColor;
+}
+.siteFooter h3{
+    font-size: $ExtLargeFont;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #333;
+}
+.footCol1 ul{
+    @include fullWidth;
+    li{
+        @include fullWidth;
+    }    
+}
+.siteFooter a{
+    color: $normalfontColor;
+    @include fullWidth;
+    padding: 4px 0;
+    
+    &:hover{
+        color: $anchorHoverColor;
+        text-decoration: none;
+    }
+}
+.newsLetterformWrap, .newsLetterformWrap ul, .socialIcons, .socialTagline{
+   @include fullWidth;
+}
+.newsLetterformWrap input, {
+    float: left;
+}
+.newsLetterformWrap input.inputBox{
+    width: 73%;
+}
+.newsLetterformWrap input.btn{
+    width: 25%;
+    float: right;
+}
+.socialTagline{
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+@include all-socials-sprites;
+
+.socialIcons li{
+    float: left; 
+    margin-right: 5px;
+    width: 50px;
+    height: 40px;
+    list-style: none;
+    a{
+        width: 100%;
+        height: 50px;
+    }
+}

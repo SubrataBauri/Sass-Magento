@@ -1,0 +1,73 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+
+<header class="siteHeader">
+    <div class="stickyTopPannel">
+        <div class="container">
+            <?php echo $this->getLayout()->createBlock("cms/block")->setBlockId("headerInformation")->toHtml();?>
+            <ul class="headerTopLinks">
+                <li>
+                    <?php
+                    $helper = Mage::helper("customer");
+                    $loginUrl = $helper->getLoginUrl();
+                    $accountUrl = $helper->getAccountUrl();
+                    ?>
+                    <a href="<?php echo $loginUrl; ?>">Login / Register</a>
+                </li>                
+                <li><a href="<?php echo $accountUrl; ?>">My Account</a></li>           
+                <li>
+                    <?php
+                        $quote = Mage::getModel('checkout/session')->getQuote();
+                        $quoteData= $quote->getData();
+//                        $grandTotal= number_format($quoteData['grand_total'], 2, '.', ' ');
+                        $grandTotal = Mage::helper('core')->currency($quoteData['grand_total'], true, false);
+                    ?>
+                    <a href="<?php echo Mage::helper('checkout/cart')->getCartUrl(); ?>">Cart Total: <?php echo $grandTotal //$grandTotal > 0 ? $grandTotal : '0.00' ; ?></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container logoSearchWrap">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 logoWrap">
+                <a class="logo" href="<?php echo $this->getUrl('') ?>">
+                    <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />
+                </a>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 searchWrap">
+                <?php echo $this->getChildHtml('topSearch') ?>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <?php echo $this->getChildHtml('topMenu') ?>
+    </div>
+</header>
+<?php echo $this->getChildHtml('topContainer'); ?>

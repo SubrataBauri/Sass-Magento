@@ -1,0 +1,29 @@
+@mixin fullWidth{
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+@mixin inlineList{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+    li{
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+}
+/*  Text color  */
+$normalfontColor : #606060;
+$anchorColor : #b2591a;
+$anchorHoverColor : #ed741f;
+
+/*  Font and Size  */
+$pfont : verdana;
+$normalFont : 14px;
+$smallFont : 12px;
+$extSmallFont : 10px;
+$bigFont : 16px;
+$ExtLargeFont : 18px;

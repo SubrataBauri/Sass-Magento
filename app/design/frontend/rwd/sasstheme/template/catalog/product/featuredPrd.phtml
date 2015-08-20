@@ -1,0 +1,34 @@
+<div class="aboutText">
+    <?php echo $this->getLayout()->createBlock("cms/block")->setBlockId("home_page_about_text")->toHtml();?>
+</div>
+<div class="productsWrap featuredPrdWrap">
+    <h2>Featured Products</h2>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="row">
+        <?php 
+            $collection = Mage::getModel('catalog/product')->getCollection()->addAttributeToFilter('feature_product', 1);
+            foreach($collection as $eachPrd):
+            Mage::log($eachPrd->getEntityId(), null, 'sil.log');
+            Mage::log($eachPrd['entity_id'], null, 'sil.log');
+            $_product= Mage::getModel('catalog/product')->load($eachPrd['entity_id']);
+        ?>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 itemsWrap">
+                <div class="imgPrdWrap text-center">
+                     <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image">
+                    <?php $_imgSize = 255; ?>
+                    <img id="product-collection-image-<?php echo $_product->getId(); ?>"
+                         src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($_imgSize); ?>"
+                         alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                </a>
+                </div>
+                <div class="prdInfoWrap">
+                    <h4 class="text-center"><a href=""><?php echo $_product->getName(); ?></a></h4>
+                    <div class="priceWrap text-center">
+                        <p class="price"><?php echo Mage::helper('core')->currency($_product->getFinalPrice(), true, false); ?></p>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+        </div>
+    </div>
+</div>
